@@ -1,4 +1,6 @@
 package co.com.petProject.produccion.maquinaria.values;
 
-public class MaquinariaID {
+import co.com.sofka.domain.generic.Identity;
+
+public class MaquinariaID extends Identity {
 }

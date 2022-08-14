@@ -1,4 +1,11 @@
 package co.com.petProject.produccion.maquinaria;
 
-public class Maquinaria {
+import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.petProject.produccion.maquinaria.values.MaquinariaID;
+
+public class Maquinaria extends AggregateEvent<MaquinariaID>{
+    public Maquinaria(MaquinariaID entityId) {
+        super(entityId);
+    }
+
 }
