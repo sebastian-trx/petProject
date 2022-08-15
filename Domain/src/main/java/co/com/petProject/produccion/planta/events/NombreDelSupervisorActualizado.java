@@ -9,7 +9,6 @@ import java.util.UUID;
 public class NombreDelSupervisorActualizado extends DomainEvent {
 
     private final SupervisorID supervisorID;
-
     private final Nombre nombre;
 
     public NombreDelSupervisorActualizado(SupervisorID supervisorID, Nombre nombre) {
@@ -21,8 +20,8 @@ public class NombreDelSupervisorActualizado extends DomainEvent {
     public SupervisorID getSupervisorID() {
         return supervisorID;
     }
-
     public Nombre getNombre() {
         return nombre;
     }
+
 }

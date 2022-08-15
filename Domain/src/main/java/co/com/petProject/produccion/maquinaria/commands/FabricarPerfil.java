@@ -1,13 +1,13 @@
-package co.com.petProject.produccion.maquinaria.events;
+package co.com.petProject.produccion.maquinaria.commands;
 
 import co.com.petProject.produccion.maquinaria.values.MaquinaPerfilID;
 import co.com.petProject.produccion.maquinaria.values.NumeroRodillo;
 import co.com.petProject.produccion.maquinaria.values.RegistroMantenimiento;
 import co.com.petProject.produccion.maquinaria.values.TipoRodamiento;
 import co.com.petProject.produccion.producto.values.TipoDeAcero;
-import co.com.sofka.domain.generic.DomainEvent;
+import co.com.sofka.domain.generic.Command;
 
-public class TuboCreado extends DomainEvent {
+public class FabricarPerfil extends Command {
 
     private final MaquinaPerfilID maquinaPerfilId;
     private final TipoDeAcero tipoDeAcero;
@@ -15,9 +15,7 @@ public class TuboCreado extends DomainEvent {
     private final TipoRodamiento tiporodamiento;
     private final RegistroMantenimiento registroMantenimiento;
 
-    public TuboCreado (MaquinaPerfilID maquinaria, TipoDeAcero tipoDeAcero, RegistroMantenimiento registroMantenimiento, NumeroRodillo numeroRodillo,  TipoRodamiento tiporodamiento){
-
-        super("co.com.petProject.produccion.TuboCreado");
+    public FabricarPerfil (MaquinaPerfilID maquinaria, TipoDeAcero tipoDeAcero, RegistroMantenimiento registroMantenimiento, NumeroRodillo numeroRodillo,  TipoRodamiento tiporodamiento){
 
         this.maquinaPerfilId = maquinaria;
         this.tipoDeAcero = tipoDeAcero;
@@ -30,17 +28,23 @@ public class TuboCreado extends DomainEvent {
     public MaquinaPerfilID getMaquinaPerfilId() {
         return maquinaPerfilId;
     }
+
     public TipoDeAcero getTipoDeAcero() {
         return tipoDeAcero;
     }
+
     public NumeroRodillo getNumeroRodillo() {
         return numeroRodillo;
     }
+
     public TipoRodamiento getTiporodamiento() {
         return tiporodamiento;
     }
+
     public RegistroMantenimiento getRegistroMantenimiento() {
         return registroMantenimiento;
     }
+
+
 
 }

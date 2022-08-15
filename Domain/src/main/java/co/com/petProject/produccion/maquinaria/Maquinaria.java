@@ -5,10 +5,18 @@ import co.com.petProject.produccion.maquinaria.values.MaquinariaID;
 
 public class Maquinaria extends AggregateEvent<MaquinariaID>{
 
-
-
     public Maquinaria(MaquinariaID entityId) {
         super(entityId);
+    }
+
+    // Comportamientos
+
+    public void FabricarPerfil(){
+
+    }
+
+    public void FabricarTubo(){
+
     }
 
 }
