@@ -7,7 +7,8 @@ import co.com.sofka.domain.generic.EventChange;
 
 public class PlantaChange extends EventChange {
     public PlantaChange(Planta planta){
-        apply((PlantaCreada event ) -> {});
+
+        apply( (PlantaCreada event) -> {} );
 
         apply((SupervisorAgregado event) -> {
             var supervisor = new Supervisor(event.getSupervisorID(), event.getInventario(), event.getNombre());

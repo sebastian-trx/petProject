@@ -13,7 +13,6 @@ public class Perfil extends Entity<PerfilId> {
     Dimension dimension;
 
     public Perfil(PerfilId entityId, TipoDeAcero tipoDeAcero, Dimension dimension) {
-
         super(entityId);
         this.tipoDeAcero = tipoDeAcero;
         this.dimension = dimension;

@@ -1,25 +1,22 @@
 package co.com.petProject.produccion.maquinaria.events;
 
-import co.com.petProject.produccion.maquinaria.values.MaquinaPerfilID;
-import co.com.petProject.produccion.maquinaria.values.NumeroRodillo;
-import co.com.petProject.produccion.maquinaria.values.RegistroMantenimiento;
-import co.com.petProject.produccion.maquinaria.values.TipoRodamiento;
+import co.com.petProject.produccion.maquinaria.values.*;
 import co.com.petProject.produccion.producto.values.TipoDeAcero;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public class TuboCreado extends DomainEvent {
 
-    private final MaquinaPerfilID maquinaPerfilId;
+    private final MaquinaTuboID maquinaTuboID;
     private final TipoDeAcero tipoDeAcero;
     private final NumeroRodillo numeroRodillo;
     private final TipoRodamiento tiporodamiento;
     private final RegistroMantenimiento registroMantenimiento;
 
-    public TuboCreado (MaquinaPerfilID maquinaria, TipoDeAcero tipoDeAcero, RegistroMantenimiento registroMantenimiento, NumeroRodillo numeroRodillo,  TipoRodamiento tiporodamiento){
+    public TuboCreado (MaquinaTuboID maquinaria, TipoDeAcero tipoDeAcero, RegistroMantenimiento registroMantenimiento, NumeroRodillo numeroRodillo,  TipoRodamiento tiporodamiento){
 
         super("co.com.petProject.produccion.TuboCreado");
 
-        this.maquinaPerfilId = maquinaria;
+        this.maquinaTuboID = maquinaria;
         this.tipoDeAcero = tipoDeAcero;
         this.registroMantenimiento = registroMantenimiento;
         this.numeroRodillo = numeroRodillo;
@@ -27,8 +24,8 @@ public class TuboCreado extends DomainEvent {
 
     }
 
-    public MaquinaPerfilID getMaquinaPerfilId() {
-        return maquinaPerfilId;
+    public MaquinaTuboID getMaquinaTuboId() {
+        return maquinaTuboID;
     }
     public TipoDeAcero getTipoDeAcero() {
         return tipoDeAcero;
