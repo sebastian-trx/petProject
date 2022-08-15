@@ -2,29 +2,33 @@ package co.com.petProject.produccion.maquinaria.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
-public class TipoAcero implements ValueObject<TipoAcero.Props> {
+import java.util.Objects;
 
-    private final String HR;
-    private final String CR;
+public class TipoAcero implements ValueObject<TipoAcero.Tipo> {
 
-    public TipoAcero(String HR, String CR) {
-        this.HR = HR;
-        this.CR = CR;
+    private final TipoAcero.Tipo tipo;
+
+    public TipoAcero(TipoAcero.Tipo tipo) {
+
+        this.tipo = Objects.requireNonNull(tipo);
+
+        if (String.valueOf(this.tipo).isBlank()) {
+            throw new IllegalArgumentException("El tipo de acero debe estar definido ... puede ser [HR, CR]");
+        }
+
+    }
+
+    public static TipoAcero of(TipoAcero.Tipo tipo){
+        return new TipoAcero(tipo);
     }
 
     @Override
-    public Props value() {
-        return new Props(){
-            @Override
-            public String HR() {return HR;}
-            @Override
-            public String CR() {return CR;            }
-        };
+    public TipoAcero.Tipo value() {
+        return tipo;
     }
 
-    public interface Props{
-        String HR();
-        String CR();
+    public enum Tipo{
+        HR, CR;
     }
 
 }
