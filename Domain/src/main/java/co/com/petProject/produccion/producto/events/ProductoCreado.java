@@ -5,6 +5,6 @@ import co.com.sofka.domain.generic.DomainEvent;
 
 public class ProductoCreado extends DomainEvent {
     public ProductoCreado(ProductoId productoId){
-        super("co.com.petProject.produccion.producto.ProductoCreado");
+        super("co.com.petProject.produccion.ProductoCreado");
     }
 }

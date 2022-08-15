@@ -16,7 +16,7 @@ public class PerfilCreado extends DomainEvent {
     private final Dimension dimension;
 
     public PerfilCreado( PerfilId perfilId, TipoDeAcero tipoDeAcero, Dimension dimension) {
-        super("co.com.petProject.produccion.producto");
+        super("co.com.petProject.produccion.PerfilCreado");
         this.perfilId = perfilId;
         this.tipoDeAcero = tipoDeAcero;
         this.dimension = dimension;

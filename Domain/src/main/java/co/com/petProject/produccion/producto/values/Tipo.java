@@ -4,15 +4,19 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class Tipo implements ValueObject<Boolean> {
-    private final Boolean value;
+public class Tipo implements ValueObject<Tipo.Estado> {
 
-    public Tipo(Boolean value) {
-        this.value = Objects.requireNonNull(value);
+    private Estado tipo;
+    public Tipo(Estado tipo){
+        this.tipo = Objects.requireNonNull(tipo);
     }
 
     @Override
-    public Boolean value() {
-        return null;
+    public Estado value(){
+        return tipo;
+    }
+
+    public enum Estado {
+        Primera, Segunda ;
     }
 }
